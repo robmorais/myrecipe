@@ -41,7 +41,7 @@ class RecipesController < ApplicationController
   private
     # That is needed in Rails 4+ to say explicit which parameters are accepted
     def recipe_params
-      params.require(:recipe).permit(:name, :summary, :description)
+      params.require(:recipe).permit(:name, :summary, :description, :picture)
     end
   
 end
