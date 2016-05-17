@@ -16,11 +16,25 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new(recipe_params)
     @recipe.chef = Chef.first
     
-    if (@recipe.save) 
+    if @recipe.save
       flash[:success] = "Your recipe was created successfully!"
       redirect_to recipes_path
     else 
       render :new
+    end
+  end
+  
+  def edit
+    @recipe = Recipe.find(params[:id])
+  end
+  
+  def update
+    @recipe = Recipe.find(params[:id])
+    if @recipe.update(recipe_params)
+      flash[:success] = "Your recipe was updated successfully!"
+      redirect_to recipe_path(@recipe)
+    else
+      render :edit
     end
   end
   
