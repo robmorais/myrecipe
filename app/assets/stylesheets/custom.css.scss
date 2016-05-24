@@ -69,3 +69,16 @@ span.picture {
 .show_recipe {
   margin: 10px;
 }
+
+.glyph-selected{
+  color:green;
+  opacity:0.7;
+}
+
+.glyph-selected:hover{
+  opacity:1;
+}
+
+.glyph-selected:active{
+  color:red;
+}
