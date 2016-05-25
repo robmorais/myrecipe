@@ -2,7 +2,7 @@
   <h1>Welcome to myRecipe App!</h1>
   <p>Feel free to browser our recipes and create your own recipe book!</p>
   <p>
-    <%= link_to "Sign Up", "#", class: "btn btn-primary btn-lg", id: "signup-btn" %>
+    <%= link_to "Sign Up", register_path, class: "btn btn-primary btn-lg", id: "signup-btn" %>
   </p>
 </div>
 <div class="row">
@@ -15,16 +15,16 @@
   </div>
   <div class="col-lg-4">
     <h3 class="midrow">
-      View Recipes as Guest User
+      Sign in to your account
     </h3>
-    <h2 class="left">Browse and view recipes as a guest and sign up later</h2>
-    <p><%=link_to "Browse recipe listing", "", class: "btn btn-warning btn-small" %></p>
+    <h2 class="left">Add/update your recipes, create reviews and much more</h2>
+    <p><%=link_to "Log in to your account", "", class: "btn btn-warning btn-small" %></p>
   </div>
   <div class="col-lg-4">
     <h3 class="midrow">
-      View Recipes as Guest User
+      View Chefs as Guest User
     </h3>
-    <h2 class="left">Browse and view recipes as a guest and sign up later</h2>
-    <p><%=link_to "Browse recipe listing", "", class: "btn btn-warning btn-small" %></p>
+    <h2 class="left">Browse and view all Chefs as a guest and sign up later</h2>
+    <p><%=link_to "Browse chef listing", chefs_path, class: "btn btn-warning btn-small" %></p>
   </div>
 </div>
